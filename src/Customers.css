@@ -1,0 +1,26 @@
+#customerTitle {
+    text-align: center;
+  }
+  
+  #buttonPanel {
+    text-align: center;
+    margin: 50px 0;
+  }
+  
+  select[name="level"] {
+    margin: 0 50px;
+  }
+  
+  #customers {
+    text-align: left;
+    width: 100%;
+  }
+  
+  #customers td, #customers th {
+    border: 1px solid;
+    padding: 10px;
+  }
+  
+  #deleteButton {
+    margin: 0 10px 0 0;
+  }
