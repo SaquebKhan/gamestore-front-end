@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import GamesCard from './GamesCard.js';
 import GamesForm from './GamesForm.js';
 
-function Game() {
+function Games() {
 
-    const [Game, setGames] = useState([]);
+    const [Games, setGames] = useState([]);
     const [showForm, setShowForm] = useState(false);
     const [scopedGame, setScopedGame] = useState({});
     const [error, setError] = useState();
@@ -13,7 +13,7 @@ function Game() {
         fetch("http://localhost:8080/games")
         .then(response => response.json())
         .then(result => setGames(result))
-        .catch(Game.log);
+        .catch(Games.log);
     }, []);
 
     function addClick() {
@@ -83,4 +83,4 @@ function Game() {
     )
 }
 
-export default Game;
+export default Games;
