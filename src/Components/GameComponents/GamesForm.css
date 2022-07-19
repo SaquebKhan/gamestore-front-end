@@ -1,4 +1,4 @@
-#customerTitle {
+#GameTitle {
     text-align: center;
   }
   
@@ -7,16 +7,12 @@
     margin: 50px 0;
   }
   
-  select[name="level"] {
-    margin: 0 50px;
-  }
-  
-  #customers {
+  #Games {
     text-align: left;
     width: 100%;
   }
   
-  #customers td, #customers th {
+  #Games td, #Games th {
     border: 1px solid;
     padding: 10px;
   }

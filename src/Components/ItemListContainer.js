@@ -1,12 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import ConsoleItem from './ConsoleItem';
-import GameItem from './GameItem';
-import ShirtItem from './ShirtItem';
-
-
-
-
+import ConsoleItem from './ConsoleComponents/ConsoleItem';
+import GameItem from './GameComponents/GamesItem';
+import ShirtItem from './ShirtComponents/ShirtItem';
 
 export default function ItemListContainer(props) {
 
