@@ -1,7 +1,7 @@
 function ConsoleCard({ Console, notify }) {
 
     function handleDelete() {
-        fetch(`http://localhost:8080/consoles/${Console.ConsoleId}`, { method: "DELETE" })
+        fetch(`http://localhost:8080/consoles/${Console.id}`, { method: "DELETE" })
             .then(() => notify({ action: "delete", Console: Console }))
             .catch(error => notify({ action: "delete", error: error }));
     }

@@ -1,17 +1,17 @@
-function GamesCard({ games, notify }) {
+function GamesCard({ Games, notify }) {
     function handleDelete() {
-      fetch(`http://localhost:8080/games/${games.Id}`, { method: "DELETE" })
-        .then(() => notify({ action: "delete", games: games }))
+      fetch(`http://localhost:8080/Games/${Games.id}`, { method: "DELETE" })
+        .then(() => notify({ action: "delete", Games: Games }))
         .catch((error) => notify({ action: "delete", error: error }));
     }
     return (
-      <tr key={games.gamesId}>
-        <td>{games.title}</td>
-        <td>{games.ESRBRation}</td>
-        <td>{games.description}</td>
-        <td>{games.price}</td>
-        <td>{games.studio}</td>
-        <td>{games.quantity}</td>
+      <tr key={Games.GamesId}>
+        <td>{Games.title}</td>
+        <td>{Games.ESRBRation}</td>
+        <td>{Games.description}</td>
+        <td>{Games.price}</td>
+        <td>{Games.studio}</td>
+        <td>{Games.quantity}</td>
         <td>
           <button
             id="deleteButton"
@@ -25,7 +25,7 @@ function GamesCard({ games, notify }) {
             id="editButton"
             className="btn btn-secondary"
             type="button"
-            onClick={() => notify({ action: "edit-form", games: games })}
+            onClick={() => notify({ action: "edit-form", Games: Games })}
           >
             Edit
           </button>
