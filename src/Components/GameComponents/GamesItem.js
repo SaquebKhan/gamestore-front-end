@@ -22,7 +22,7 @@ function Games() {
         setShowForm(true);
     }
 
-    function notify({ action, Game, error }) {
+    function notify({ action, Games, error }) {
 
         if (error) {
             setError(error);
@@ -32,22 +32,22 @@ function Games() {
 
         switch (action) {
             case "add":
-                setGames([...Games, Game]);
+                setGames([...Games, Games]);
                 break;
             case "edit":
                 setGames(Games.map(e => {
-                    if (e.id === Game.id) {
-                        return Game;
+                    if (e.id === Games.id) {
+                        return Games;
                     }
                     return e;
                 }));
                 break;
             case "edit-form":
-                setScopedGame(Game);
+                setScopedGame(Games);
                 setShowForm(true);
                 return;
             case "delete":
-                setGames(Games.filter(e => e.id !== Game.id));
+                setGames(Games.filter(e => e.id !== Games.id));
                 break;
         }
         
@@ -56,7 +56,7 @@ function Games() {
     }
 
     if (showForm) {
-        return <GamesForm Game={scopedGame} notify={notify} />
+        return <GamesForm Games={scopedGame} notify={notify} />
     }
 
     return (
@@ -75,7 +75,7 @@ function Games() {
                     <th>quantity</th>
                     </tr>
                     <tbody>
-                        {Games.map(r => <GamesCard key={r.GameId} Game={r} notify={notify} />)}
+                        {Games.map(r => <GamesCard key={r.Id} Games={r} notify={notify} />)}
                     </tbody>
                 </table>
             </div>
