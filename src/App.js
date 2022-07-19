@@ -1,4 +1,4 @@
-import GamesItem from './Components/GameComponents/GameItem.js';
+import GamesItem from './Components/GameComponents/GamesItem.js';
 import ShirtItem from './Components/ShirtComponents/ShirtItem.js';
 import ConsoleItem from './Components/ConsoleComponents/ConsoleItem.js';
 

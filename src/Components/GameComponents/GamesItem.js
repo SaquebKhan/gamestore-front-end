@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import GameCard from './GameCard.js';
-import GameForm from './GameForm.js';
+import GamesCard from './GamesCard.js';
+import GamesForm from './GamesForm.js';
 
 function Games() {
 
@@ -13,7 +13,7 @@ function Games() {
         fetch("http://localhost:8080/Games")
         .then(response => response.json())
         .then(result => setGames(result))
-        .catch(Game.log);
+        .catch(Games.log);
     }, []);
 
     function addClick() {
@@ -56,7 +56,7 @@ function Games() {
     }
 
     if (showForm) {
-        return <GameForm Game={scopedGame} notify={notify} />
+        return <GamesForm Game={scopedGame} notify={notify} />
     }
 
     return (
@@ -75,7 +75,7 @@ function Games() {
                     <th>quantity</th>
                     </tr>
                     <tbody>
-                        {Games.map(r => <GameCard key={r.GameId} Game={r} notify={notify} />)}
+                        {Games.map(r => <GamesCard key={r.GameId} Game={r} notify={notify} />)}
                     </tbody>
                 </table>
             </div>

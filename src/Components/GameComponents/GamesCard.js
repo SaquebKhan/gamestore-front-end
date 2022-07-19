@@ -5,9 +5,10 @@ function GamesCard({ games, notify }) {
         .catch((error) => notify({ action: "delete", error: error }));
     }
     return (
-      <tr key={games.gameId}>
+      <tr key={games.gamesId}>
         <td>{games.title}</td>
         <td>{games.ESRBRation}</td>
+        <td>{games.description}</td>
         <td>{games.price}</td>
         <td>{games.studio}</td>
         <td>{games.quantity}</td>
